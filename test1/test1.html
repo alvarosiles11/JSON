@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Test json</title>
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+			crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+			crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+			crossorigin="anonymous"></script>
+
+		<style>
+			.parent {
+				display: grid;
+				grid-gap: 1rem;
+				grid-template-columns: repeat(10, minmax(80px, 1fr));
+				background-color: transparent;
+			}
+
+			.box {
+				background-color: transparent;
+				border-radius: 10px;
+				height: "80px";
+				align-items: center;
+				justify-content: center;
+				display: flex;
+
+			}
+
+		</style>
+	</head>
+
+	<body>
+
+		<hr>
+
+		<section class="container">
+			<div class="parent">
+			</div>
+		</section>
+
+
+
+
+
+
+		<script>
+			var json = [
+				{
+					"grupo": "Mobile",
+					"title": "React Native",
+					"foto": "https://d33wubrfki0l68.cloudfront.net/554c3b0e09cf167f0281fda839a5433f2040b349/ecfc9/img/header_logo.svg",
+					"link": "https://reactnative.dev/"
+				},
+				{
+					"grupo": "Mobile",
+					"title": "Android Studio",
+					"foto": "https://camo.githubusercontent.com/c9803b7b0326e1035e7f0be9a0a039086aa413c9e0e4013c693dbcb56607831a/68747470733a2f2f63646e2e69636f6e73636f75742e636f6d2f69636f6e2f667265652f706e672d3132382f616e64726f69642d3234352d313137353237332e706e67",
+					"link": "https://developer.android.com/studio?hl=es-419"
+				},
+				{
+					"grupo": "Backend",
+					"title": "Java",
+					"foto": "https://raw.githubusercontent.com/github/explore/5b3600551e122a3277c2c5368af2ad5725ffa9a1/topics/java/java.png",
+					"link": "https://www.java.com/es/download/"
+				},
+				{
+					"grupo": "Backend",
+					"title": "Php",
+					"foto": "https://avatars.githubusercontent.com/u/25158?s=200&v=4",
+					"link": "https://www.php.net/manual/es/tutorial.firstpage.php"
+				},
+				{
+					"grupo": "Backend",
+					"title": "Node.js",
+					"foto": "https://avatars.githubusercontent.com/u/9950313?s=200&v=4",
+					"link": "https://nodejs.org/es/download/"
+				},
+				{
+					"grupo": "Frontend",
+					"title": "HTML5",
+					"foto": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png",
+					"link": "https://lenguajehtml.com/html/"
+				},
+				{
+					"grupo": "Frontend",
+					"title": "JavaScript",
+					"foto": "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
+					"link": "https://www.javascript.com/learn/strings"
+				},
+				{
+					"grupo": "Frontend",
+					"title": "Angular",
+					"foto": "https://avatars.githubusercontent.com/u/139426?s=200&v=4",
+					"link": "https://angular.io/tutorial/toh-pt0"
+				},
+				{
+					"grupo": "Frontend",
+					"title": "React",
+					"foto": "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
+					"link": "https://reactjs.org/"
+				},
+				{
+					"grupo": "Frontend",
+					"title": "Servisofts",
+					"foto": "https://avatars.githubusercontent.com/u/69025139?v=4",
+					"link": "https://www.npmjs.com/package/servisofts-component"
+				},
+				{
+					"grupo": "Database",
+					"title": "MySQL",
+					"foto": "https://avatars.githubusercontent.com/u/2452804?s=200&v=4",
+					"link": "https://dev.mysql.com/downloads/mysql/"
+				}
+			]
+
+
+
+			Object.keys(json).map(key => {
+				var obj = json[key];
+				$('.parent').append("<div class='box'><img src='" + obj.foto + "' width='100%' alt='" + obj.title + "'  > </div>");
+			})
+
+			// $(document).ready(function () {
+				// var html = "";
+				// Object.keys(json).map(key => {
+				// 	var obj = json[key];
+				// 	html += "<div class='box'><img src='" + obj.foto + "' width='100%' alt='" + obj.title + "'  > </div>";
+				// })
+				// $('.parent').append(html);
+			// });
+		</script>
+
+
+
+
+	</body>
+
+</html>
