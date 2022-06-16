@@ -54,37 +54,19 @@
 
 
 		<script>
-			function readTextFile(file, callback) {
-				var rawFile = new XMLHttpRequest();
-				rawFile.overrideMimeType("application/json");
-				rawFile.open("GET", file, true);
-				rawFile.onreadystatechange = function () {
-					if (rawFile.readyState === 4 && rawFile.status == "200") {
-						callback(rawFile.responseText);
-					}
-				}
-				rawFile.send(null);
-			}
 
 
-
-			var usuarios = [];
-
-			var auch = readTextFile("./data.json", function (text) {
-				var data = JSON.parse(text);
+			fetch("./data.json").then(response => {
+				return response.json();
+			}).then(data =>
 
 				Object.keys(data).map(key => {
 					var obj = data[key];
-					usuarios.push(obj);
-					$('.parent').append("<div class='box'><img src='" + obj.foto + "' width='100%' alt='" + obj.title + "'  > </div>");
+					console.log(obj),
+						$('.parent').append("<div class='box'><img src='" + obj.foto + "' width='100%' alt='" + obj.title + "'  > </div>");
 				})
 
-			});
-
-			console.log(usuarios);
-
-
-
+			);
 		</script>
 
 
