@@ -73,6 +73,9 @@
 			var auch = readTextFile("./data.json", function (text) {
 				var data = JSON.parse(text);
 
+				// usuarios.push(data);
+				// console.log("nuevo ", data);
+
 				Object.keys(data).map(key => {
 					var obj = data[key];
 					usuarios.push(obj);
@@ -81,7 +84,12 @@
 
 			});
 
-			console.log(usuarios);
+			// console.log(Array.length(usuarios));
+			// Object.keys(usuarios).map(key => {
+			// 	var obj = usuarios[key];
+			// 	$('.parent').append("<div class='box'><img src='" + obj.foto + "' width='100%' alt='" + obj.title + "'  > </div>");
+			// })
+
 
 
 
